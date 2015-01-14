@@ -19,7 +19,16 @@
 \usepackage[scale=0.8]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
-\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+\AtBeginDocument{\recomputelengths} % required when changes are made to page layout lengths
+
+%\usepackage[backend=biber,
+%            style=authoryear,
+%            url=false,
+%            isbn=false,
+%            doi=false,
+%            backref=true,
+%            maxcitenames=20]{biblatex}
+%\addbibresource{publications.bib}
 
 % personal data
 \firstname{Phil}
@@ -64,6 +73,11 @@ Fellow in Cornell's living-learning community initiative. Roles include
 fostering leadership and agency; connecting residents with faculty and research
 opportunities; hosting campus guests; and coordinating a variety of academic
 and social trips and activities.}
+\cventry{2014--2015}{Graduate Teaching Fellow}{Cornell University}{Ithaca
+NY}{}{The Graduate Teaching Assistant Fellowship is a program of Cornell
+University's Center for Teaching Excellence. Fellows are select graduate
+students who design and implement teaching programs, events, and resources that
+foster teaching excellence and innovative pedagogical practice across campus.}
 \cventry{2006--2010}{Teaching Assistant}{Cornell University}{Ithaca
 NY}{}{Developing and teaching section material for CS/INFO 1300 \emph{Web
 usability and design} \emph{Web programming}, CS/INFO 2300 \emph{Servers and
@@ -126,10 +140,12 @@ years of graduate study.}
 \section{Computer Languages and Frameworks}
 \cvline{}{\small Python, Android/Java, Javascript, R, HTML5/CSS, PHP}
 
-% Publications from a BibTeX file
+% publications from publications.bib
+% figure out a way of styling this to use biber???
+%\printbibliography[title=Publications,]
 \nocite{*}
 \bibliographystyle{unsrt}
-\bibliography{publications} % the name of a bibtex file
+\bibliography{publications}
 
 %\emph{\\References available on request.}
 
