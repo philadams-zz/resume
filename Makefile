@@ -1,11 +1,11 @@
 clean:
-	rm *.aux *.log *.mtc *.mtc1 *.fdb_latexmk
+	rm *.aux *.bcf *.bbl *.blg *.dvi *.log *.out *.run.xml
 
-latex:
+tex:
 	xelatex resume_current.tex
 
 all:
 	xelatex resume_current.tex
-	biblatex publications
+	bibtex resume_current
 	xelatex resume_current.tex
 	xelatex resume_current.tex
